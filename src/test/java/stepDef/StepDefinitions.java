@@ -1,4 +1,4 @@
-package hellocucumber;
+package stepDef;
 
 import io.cucumber.java.en.*;
 
