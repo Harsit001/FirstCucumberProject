@@ -7,15 +7,15 @@ import org.junit.platform.suite.api.Suite;
 
 import java.security.Key;
 
-import static io.cucumber.junit.platform.engine.Constants.FILTER_TAGS_PROPERTY_NAME;
-import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
+import static io.cucumber.junit.platform.engine.Constants.*;
 
 @Suite
 @IncludeEngines("cucumber")
-@SelectClasspathResource("hellocucumber/example.feature")
-@ConfigurationParameter(key=FILTER_TAGS_PROPERTY_NAME, value="@regression")
+@SelectClasspathResource("hellocucumber/Imgur/useraccount.feature")
+@ConfigurationParameter(key=FILTER_TAGS_PROPERTY_NAME, value="@systemtest")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
 @ConfigurationParameter(key=PLUGIN_PROPERTY_NAME, value="html:target/cucumber-html-report.html")
+@ConfigurationParameter(key =GLUE_PROPERTY_NAME, value = "stepDef")
 @ConfigurationParameter(key=PLUGIN_PROPERTY_NAME, value="json:target/cucumber-json-report.json")
 public class RunCucumberTest {
 
