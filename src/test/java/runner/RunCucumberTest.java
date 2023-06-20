@@ -11,7 +11,7 @@ import static io.cucumber.junit.platform.engine.Constants.*;
 
 @Suite
 @IncludeEngines("cucumber")
-@SelectClasspathResource("hellocucumber/Imgur/useraccount.feature")
+@SelectClasspathResource("hellocucumber/Imgur")
 @ConfigurationParameter(key=FILTER_TAGS_PROPERTY_NAME, value="@systemtest")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
 @ConfigurationParameter(key=PLUGIN_PROPERTY_NAME, value="html:target/cucumber-html-report.html")
